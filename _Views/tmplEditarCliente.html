@@ -1,0 +1,63 @@
+﻿<div id="modalEditarCliente" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Editar cliente</h4>
+			</div>
+			<div class="modal-body">
+                <div id="pepito">
+                    <select id="cmbRegimenFiscal" style="width:180px;" >
+                        <option value="0">Seleccionar</option>
+                        {#foreach $T.Paises as Pais}                                                                           
+                           <option {#if $T.IdPais == $T.Pais.IdPais}selected="selected"{#/if} value="{$T.Pais.IdPais}">{$T.Pais.Pais}</option>                           
+                        {#/for}
+                    </select>
+                </div>
+                <div class="container-fluid">
+                    <div class="well bs-component">
+                        <div class="row">
+                            <legend>Datos del cliente</legend>
+		                    <div class="col-md-12 form-group">
+				                <strong>Cliente</strong>
+
+                                <input type="text" id="txtCliente" class="form-control" />
+			                </div>
+               
+                        
+		                    <div class="col-md-4 form-group">
+				                <strong class="control-strong">País</strong>
+                                <select class="form-control input-sm" name='cmbPais' id='cmbPais'>
+						            <option value="0">-Seleccionar-</option>
+                                </select>
+			                </div>
+		                    <div class="col-md-4 form-group">
+			                    <strong class="control-strong">Estado</strong>
+				                <select class="form-control input-sm" name='cmbEstado' id='cmbEstado'>
+						            <option value="0">...</option>
+                                </select>
+		                    </div>
+		                    <div class="col-md-4 form-group">
+			                    <strong class="control-strong">Municipio</strong>
+				                <select class="form-control input-sm" name='cmbMunicipio' id='cmbMunicipio'>
+						            <option value="0">...</option>
+                                </select>
+		                    </div>
+	                    </div>                   
+                    </div>
+				    <!--<div>
+					    <div class="form-group">
+						    <label for="txtCliente">*Cliente:</label>
+						    <input type="text" id="txtCliente" class="form-control" />
+					    </div>
+				    </div>-->
+                </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" id="btnAgregarCliente">Agregar</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+			</div>
+		</div>
+
+	</div>
+</div>

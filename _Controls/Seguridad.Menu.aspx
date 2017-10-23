@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Seguridad.Menu.aspx.cs" Inherits="_Controls_Seguridad_Menu" %>

@@ -1,0 +1,62 @@
+﻿<div id="modalSucursales" class="modal fade" role="dialog" idCliente="0">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Sucursales</h4>
+			</div>
+			<div class="modal-body">
+                <div>
+	                <p style="margin-top:10px;">
+		                <button class="btn btn-success" id="btnObtenerFormaAgregarSucursal">Agregar</button>
+	                </p>
+	                <div style="height:inherit;overflow: auto;">
+		                <table class="table table-condensed table-striped table-bordered table-hover no-margin" id="tblListaSucursales">
+			                <thead>
+				                <tr>
+					                <th>Sucursal</th>    
+                                    <th>Municipio</th>    
+                                    <th>Estado</th>
+                                    <th class="hidden-xs hidden-sm">Pais</th>    
+                                    <th class="hidden-xs hidden-sm">Tarifa</th> 
+                                    <th class="hidden-xs hidden-sm">Tensión</th> 
+                                    <th class="hidden-xs hidden-sm">Cuota</th> 
+                                    <th>Region</th>                                     					
+					                <th class="hidden-xs hidden-sm">Activo</th>
+				                </tr>
+			                </thead>
+			                <tbody></tbody>
+		                </table>
+	                </div>
+	                <div class="well">
+		                <table style="margin:0 auto;" id="PaginadorSucursales">
+			                <tbody>
+				                <tr>
+					                <td>Página</td>
+					                <td>&nbsp;</td>
+					                <td><button id="btnAnteriorPagina"><</button></td>
+					                <td>&nbsp;</td>
+					                <td><input type="text" id="txtPagina" value="1" style="width:25px;text-align:center;" /></td>
+					                <td>&nbsp;</td>
+					                <td><button id="btnSiguientePagina">></button></td>
+					                <td>&nbsp;</td>
+					                <td>De</td>
+					                <td>&nbsp;</td>
+					                <td><span id="lblPaginas">1</span> páginas</td>
+					                <td>&nbsp;</td>
+					                <td><span id="lblRegistros">0</span> resultados</td>
+				                </tr>
+			                </tbody>
+		                </table>
+	                </div>
+                </div>
+			</div>
+			<div class="modal-footer">
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+

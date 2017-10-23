@@ -1,0 +1,78 @@
+﻿<textarea id="modalAgregarCircuitoTmpl">
+	<div class="modal-dialog modal-lg" >
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Agregar circuito</h4>
+			</div>
+			<div class="modal-body">
+                <div class="container-fluid">
+                    <div class="well bs-component">
+                        <div class="row">
+                            <legend>Datos del circuito</legend>
+                            <div class="col-md-12 form-group">
+				                <strong class="control-strong">Cliente</strong>
+                                <select class="form-control input-sm" name='cmbCliente' id='cmbCliente'>
+						            <option value="0">-Seleccionar-</option>
+                                    {#foreach $T.Clientes as Cliente}                                                                           
+                                       <option {#if $T.Valor == $T.Cliente.Valor}selected="selected"{#/if} value="{$T.Cliente.Valor}">{$T.Cliente.Etiqueta}</option>                           
+                                    {#/for}
+                                </select>
+			                </div>
+                            <div class="col-md-4 form-group">
+				                <strong class="control-strong">Pais</strong>
+                                <select class="form-control input-sm" name='cmbPais' id='cmbPais'>
+						            <option value="0">-Seleccionar-</option>
+                                </select>
+			                </div>
+                            <div class="col-md-4 form-group">
+				                <strong class="control-strong">Estado</strong>
+                                <select class="form-control input-sm" name='cmbEstado' id='cmbEstado'>
+						            <option value="0">-Seleccionar-</option>
+                                </select>
+			                </div>
+                            <div class="col-md-4 form-group">
+				                <strong class="control-strong">Municipio</strong>
+                                <select class="form-control input-sm" name='cmbMunicipio' id='cmbMunicipio'>
+						            <option value="0">-Seleccionar-</option>
+                                </select>
+			                </div>
+                            <div class="col-md-4 form-group">
+				                <strong class="control-strong">Sucursal</strong>
+                                <select class="form-control input-sm" name='cmbSucursal' id='cmbSucursal'>
+						            <option value="0">-Seleccionar-</option>
+                                </select>
+			                </div>
+                            <div class="col-md-4 form-group">
+				                <strong class="control-strong">Medidor</strong>
+                                <select class="form-control input-sm" name='cmbMedidor' id='cmbMedidor'>
+						            <option value="0">-Seleccionar-</option>
+                                </select>
+			                </div>
+                            <div class="col-md-4 form-group">
+				                <strong class="control-strong">Tablero</strong>
+                                <select class="form-control input-sm" name='cmbTablero' id='cmbTablero'>
+						            <option value="0">-Seleccionar-</option>
+                                </select>
+			                </div>
+		                    <div class="col-md-4 form-group">
+				                <strong>No. Circuito</strong>
+                                <input type="text" id="txtNumeroCircuito" class="form-control" />
+			                </div>
+                            
+                            <div class="col-md-8 form-group">
+				                <strong>Descripcion</strong>
+                                <input type="text" id="txtDescripcion" class="form-control" />
+			                </div>	                    
+	                    </div>                   
+                    </div>
+                </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" id="btnAgregarCircuito">Agregar</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+			</div>
+		</div>
+
+	</div>
+</textarea>

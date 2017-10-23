@@ -1,0 +1,76 @@
+﻿<div>
+    <legend><h3>Clientes</h3></legend>
+    <!--<div id="FiltroCliente" class="well bs-component panel-collapse collapse">        			
+		<div class="row">
+            <div class="col-md-4 form-group">
+				<strong class="control-strong">Cliente</strong>
+                <select class="form-control input-sm" name='cmbFiltroCliente' id='cmbFiltroCliente'>
+					<option value="0">-Seleccionar-</option>
+                </select>
+			</div>
+		</div>
+        <div class="row">
+            <div class="col-md-10 form-group">
+			</div>	
+            <div class="col-md-1 form-group">
+			    <p><a class="btn btn-success" href="" role="button" id="btnBuscarCliente">Buscar</a></p>
+			</div>
+            <div class="col-md-1 form-group">
+			    <p><a class="btn btn-success" href="" role="button" id="btnFiltroClienteLimpiar">Limpiar</a></p>
+			</div>
+
+		</div>
+	</div>-->
+	
+
+    <div class="row">
+        <div class="col-md-6">
+            <p style="margin-top:10px;">
+		        <button class="btn btn-success" id="btnObtenerFormaAgregarCliente">Agregar</button>
+	        </p>
+        </div>
+        <div class="col-md-6">
+            <!--<p  class="text-right" style="margin-top:10px;">
+                <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#FiltroCliente">
+                    <span class="glyphicon glyphicon-cog"></span> Búsqueda avanzada
+                </button>
+            </p>-->
+        </div>
+    </div>
+	
+    <div style="height:inherit;overflow: auto;">
+		<table class="table table-condensed table-striped table-bordered table-hover no-margin" id="tblListaClientes">
+			<thead>
+				<tr>
+					<th width="65%">Cliente</th>
+                    <th width="15%">Logo</th>
+                    <th width="10%">Sucursales</th>	
+                    <th width="5%">Editar</th>					
+					<th width="5%" class="hidden-xs hidden-sm">Activo</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+	<div class="well">
+		<table style="margin:0 auto;" id="PaginadorClientes">
+			<tbody>
+				<tr>
+					<td>Página</td>
+					<td>&nbsp;</td>
+					<td><button id="btnAnteriorPagina"><</button></td>
+					<td>&nbsp;</td>
+					<td><input type="text" id="txtPagina" value="1" style="width:25px;text-align:center;" /></td>
+					<td>&nbsp;</td>
+					<td><button id="btnSiguientePagina">></button></td>
+					<td>&nbsp;</td>
+					<td>De</td>
+					<td>&nbsp;</td>
+					<td><span id="lblPaginas">1</span> páginas</td>
+					<td>&nbsp;</td>
+					<td><span id="lblRegistros">0</span> resultados</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

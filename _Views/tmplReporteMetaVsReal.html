@@ -1,0 +1,126 @@
+﻿<div style="height:inherit;overflow: auto;">
+	<div style="margin-top:10px;">
+	</div>
+	<div>
+        <h2>Reporte Meta vs Real</h2>
+		<div class="row" style="width:99%;margin-bottom: 5px;border-bottom: solid 3px;border-top: solid 3px;">
+			<div class="col-md-3 verticalLine" style="border-left: 1px solid #BBB;padding-top: 5px;padding-bottom: 5px;margin: 8px 0px 8px 0px;">
+				<strong>Filtros</strong>
+				<table class="ku-table" width="100%">
+					<tbody>
+						<tr>
+							<td>Cliente:</td>
+							<td width="120">
+								<select id="cmbCliente" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+                        <tr>
+							<td>Pais:</td>
+							<td width="120">
+								<select id="cmbPais" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+                        <tr>
+							<td>Estado:</td>
+							<td width="120">
+								<select id="cmbEstado" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+                        <tr>
+							<td>Municipio:</td>
+							<td width="120">
+								<select id="cmbMunicipio" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Sucursal:</td>
+							<td>
+								<select id="cmbSucursal" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Tablero:</td>
+							<td>
+								<select id="cmbTablero" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Circuito:</td>
+							<td>
+								<select id="cmbCircuito" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Fecha inicio:</td>
+							<td>                               
+                                <div id='txtFechaInicio' class='input-group date'>
+                                    <input id="inicio" type='text' class="formato form-control"  />
+                                    <span class="formato input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                                
+							</td>
+						</tr>
+						<tr>
+							<td>Fecha fin:</td>
+							<td>								
+                                <div id='txtFechaFin' class='input-group date'>
+                                    <input id="fin" type='text' class="formato form-control"  />
+                                    <span class="formato input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+							</td>
+						</tr>
+						<tr>
+							<td>Tipo:</td>
+							<td>
+								<div class="radio">
+									<input type="radio" name="radio1" id="radio1" value="option1" checked="" style="margin-left:0 important;">
+									<label for="radio1">
+										Año
+									</label>
+								</div>
+								<!-- <div class="radio">
+									<input type="radio" name="radio1" id="radio2" value="option2" style="margin-left:0 important;">
+									<label for="radio2">
+										Mes
+									</label>
+								</div> -->
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<button id="btnActualizar" class="btn btn-primary btn-block">Actualizar</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-9" style="margin: 8px 0; padding-top: 8px;">
+                <div class="col-md-12">
+                    <strong>Gráfica</strong>
+                </div>
+                <div class="col-md-12">				    
+				    <div class="row" id="divGrafica">					    			
+				    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>

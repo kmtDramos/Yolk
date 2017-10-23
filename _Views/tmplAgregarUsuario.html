@@ -1,0 +1,126 @@
+﻿<textarea id="modalAgregarUsuarioTmpl">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Agregar usuario</h4>
+			</div>
+			<div class="modal-body">
+                <div class="container-fluid">
+
+                        <div class="well bs-component">
+                        <div class="row">
+                            <legend>Información personal</legend>
+                            <div class="col-md-4 form-group">
+                                <strong class="control-strong">*Nombre:</strong>
+                                <input type="text" id="txtNombre" class="input-sm form-control" />
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <strong class="control-strong">*Apellido paterno:</strong>
+                                <input type="text" id="txtApellidoPaterno" class="input-sm form-control" />
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <strong class="control-strong">Apellido materno</strong>
+                                <input type="text" id="txtApellidoMaterno" class="input-sm form-control" />
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <strong class="control-strong">*Correo:</strong>
+                                <input type="text" id="txtCorreo" class="input-sm form-control" />
+                            </div>
+							<div class="col-md-4 form-group">
+								<strong class="control-strong">*Jefe inmediato</strong>
+								<select class="form-control input-sm" name='cmbJefeInmediato' id='cmbJefeInmediato'>
+									<option value="0">-Seleccionar-</option>
+									{#foreach $T.JefeInmediato as Jefe}
+									    <option {#if $T.Valor= =$T.Jefe.Valor}selected ="selected" {#/if} value="{$T.Jefe.Valor}">{$T.Jefe.Etiqueta}</option>
+									{#/for}
+								</select>
+							</div>
+
+                            <div class="col-md-3 form-group">
+								<strong class="control-strong">Responsable sucursal</strong><br />
+								<input type="checkbox" id="checkEsRespSuc" value="<%=responsableSuc %>">
+							</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4 form-group">
+                                <strong class="control-strong">*Perfil:</strong>
+                                <select class="form-control input-sm" name="cmbPerfil" id="cmbPerfil">
+                                    <option value="0">-Seleccionar-</option>
+                                    {#foreach $T.Perfiles as Perfil}
+                                        <option {#if $T.IdPerfilPredeterminado==$T.Perfil.Valor}selected ="selected" {#/if} value="{$T.Perfil.Valor}">{$T.Perfil.Etiqueta}</option>
+                                    {#/for}
+                                </select>
+                            </div>
+							<div id="divProveedor" class="hidden col-md-4 form-group">
+								<strong class="control-strong">*Proveedor</strong>
+								<select class="form-control input-sm" name='cmbProveedor' id='cmbProveedor'>
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</div>
+                        </div>
+                        </div>
+                        
+                        <div class="well bs-component">
+                        <div class="row">
+                            <legend>Sucursal predeterminada</legend>
+                            <div class="col-md-4 form-group">
+                                <strong class="control-strong">*Cliente</strong>
+                                <select class="form-control input-sm" name='cmbCliente' id='cmbCliente'>
+                                    <option value="0">-Seleccionar-</option>
+                                    {#foreach $T.Clientes as Cliente}
+                                    <option {#if $T.Valor= =$T.Cliente.Valor}selected ="selected" {#/if} value="{$T.Cliente.Valor}">{$T.Cliente.Etiqueta}</option>
+                                    {#/for}
+                                </select>
+                            </div>                            
+                            <div class="col-md-4 form-group">
+                                <strong class="control-strong">Pais</strong>
+                                <select class="form-control input-sm" name='cmbPais' id='cmbPais'>
+                                    <option value="0">-Seleccionar-</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <strong class="control-strong">Estado</strong>
+                                <select class="form-control input-sm" name='cmbEstado' id='cmbEstado'>
+                                    <option value="0">-Seleccionar-</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <strong class="control-strong">Municipio</strong>
+                                <select class="form-control input-sm" name='cmbMunicipio' id='cmbMunicipio'>
+                                    <option value="0">-Seleccionar-</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <strong class="control-strong">*Sucursal</strong>
+                                <select class="form-control input-sm" name='cmbSucursal' id='cmbSucursal'>
+                                    <option value="0">-Seleccionar-</option>
+                                </select>
+                            </div>
+				        </div>
+                        </div>
+
+                        <div class="well bs-component">
+                        <div class="row">
+                            <legend>Acceso al sistema</legend>
+                            <div class="col-md-4 form-group">
+                                <strong class="control-strong">*Usuario</strong>
+                                <input type="text" id="txtUsuario" class="input-sm form-control" />
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <strong class="control-strong">*Contraseña:</strong>
+                                <input type="password" id="txtPassword" class="input-sm form-control" />
+                            </div>
+                        </div>
+                        </div>
+
+                </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" id="btnAgregarUsuario">Agregar</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+			</div>
+		</div>
+	</div>
+</textarea>

@@ -1,0 +1,202 @@
+﻿<div style="height:inherit;overflow: auto;">
+	<div style="margin-top:10px;">
+	</div>
+	<div>
+        <h2>Estatus por Circuito</h2>
+		<div class="row" style="width:100%;margin-bottom: 5px;border-bottom: solid 3px;border-top: solid 3px;">
+			<div class="col-md-3 verticalLine" style="border-left: 1px solid #BBB;padding-top: 5px;padding-bottom: 5px;margin: 8px 0px 8px 0px;">
+				<strong>Filtros</strong>
+				<table class="ku-table" width="100%">
+					<tbody>
+						<tr>
+							<td>Cliente:</td>
+							<td width="120">
+								<select id="cmbCliente" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+                        <tr>
+							<td>Pais:</td>
+							<td width="120">
+								<select id="cmbPais" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+                        <tr>
+							<td>Estado:</td>
+							<td width="120">
+								<select id="cmbEstado" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+                        <tr>
+							<td>Municipio:</td>
+							<td width="120">
+								<select id="cmbMunicipio" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Sucursal:</td>
+							<td>
+								<select id="cmbSucursal" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Tablero:</td>
+							<td>
+								<select id="cmbTablero" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+                        <tr>
+							<td>Circuito:</td>
+							<td>
+								<select id="cmbCircuito" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+                        <tr>
+							<td>Estatus:</td>
+							<td>
+								<select id="cmbRango" style="width:100%;">
+                                    <option value="0">-Seleccionar-</option>
+									<option value="1">Dentro de rango</option>
+                                    <option value="2">Fuera de rango</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Fecha inicio:</td>
+							<td>
+								<div id='txtFechaInicio' class='input-group date'>
+                                    <input id="inicio" type='text' class="formato form-control" />
+                                    <span class="formato input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+							</td>
+						</tr>
+						<tr>
+							<td>Fecha fin:</td>
+							<td>
+								<div id='txtFechaFin' class='input-group date'>
+                                    <input id="fin" type='text' class="formato form-control" />
+                                    <span class="formato input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<button id="btnActualizar" class="btn btn-primary btn-block">Actualizar</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-9" style="margin: 8px 0; padding-top: 8px;">
+				<strong>Resumen ejecutivo</strong>
+                <div class="row" style="padding-top:23px;">
+                <div class="col-lg-4 col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-line-chart fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="divConsumoKWH" class="huge">0</div>
+                                    <div>Consumo KwH</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div id="tipoConsumoKWH" tipoConsumo="1" class="panel-footer">
+                                <span class="pull-left">Ver Detalle</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-hourglass-o fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="divConsumoHoras"class="huge">0</div>
+                                    <div>Consumo Horas</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div id="tipoConsumoHoras" tipoConsumo="3" class="panel-footer">
+                                <span class="pull-left">Ver Detalle</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-usd fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="divConsumoImporte" class="huge">0</div>
+                                    <div>Consumo Importe</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div id="tipoConsumoImporte" tipoConsumo="2" class="panel-footer">
+                                <span class="pull-left">Ver Detalle</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>                
+            </div>
+			</div>
+		</div>
+		<div style="width:100%; overflow: auto;">
+			<strong>Detalle</strong>
+			<table class="ku-table table-striped" id="tblDetalle" width="100%">
+				<thead>
+					<tr>
+						<th>Pais</th>
+						<th>Estado</th>
+						<th>Municipio</th>
+						<th>Cliente</th>
+						<th>Nombre sucursal</th>
+						<th># Sucursal</th>
+						<th># Tablero</th>
+						<th># Circuito</th>
+						<th>Descripción circuito</th>
+						<th>Fecha medición</th>
+						<th>Mapa tablero</th>
+						<th>Manttos.</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+	</div>
+</div>

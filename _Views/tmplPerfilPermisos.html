@@ -1,0 +1,94 @@
+﻿<textarea id="modalPerfilPermisosTmpl">
+	<div class="modal-dialog modal-lg" idPerfil="{$T.Datos.IdPerfil}" >
+		<div class="modal-content">
+			<div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Asignar permisos</h4>
+			</div>
+			<div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 form-group"> 
+                    <h4>Permisos disponibles</h4>
+                    <div style="height:inherit;overflow: auto;">
+                        <p style="margin-top:10px; text-align:right;">
+		                    <button class="btn btn-success text-right" id="btnAsignarPermisos">Asignar</button>
+	                    </p>
+		                <table class="table table-condensed table-striped table-bordered table-hover no-margin" id="tblListaPermisosDisponibles">
+			                <thead>
+				                <tr>
+                                    <th>Permisos</th>
+                                    <th class="text-center" width="5%"><input type="checkbox" id="TodosAsignar" value="0"/></th>
+				                </tr>
+			                </thead>
+			                <tbody></tbody>
+		                </table>
+	                </div>
+                    <div class="well">
+		                <table style="margin:0 auto;" id="PaginadorPermisosDisponibles">
+			                <tbody>
+				                <tr>
+					                <td>Página</td>
+					                <td>&nbsp;</td>
+					                <td><button id="btnAnteriorPagina"><</button></td>
+					                <td>&nbsp;</td>
+					                <td><input type="text" id="txtPagina" value="1" style="width:25px;text-align:center;" /></td>
+					                <td>&nbsp;</td>
+					                <td><button id="btnSiguientePagina">></button></td>
+					                <td>&nbsp;</td>
+					                <td>De</td>
+					                <td>&nbsp;</td>
+					                <td><span id="lblPaginas">1</span> páginas</td>
+					                <td>&nbsp;</td>
+					                <td><span id="lblRegistros">0</span> resultados</td>
+				                </tr>
+			                </tbody>
+		                </table>
+	                </div>                         
+                    </div>
+
+                    <div class="col-md-6 form-group"> 
+                        <h4>Permisos asignados</h4>
+                        <div style="height:inherit;overflow: auto;">
+                            <p style="margin-top:10px; text-align:right;">
+		                        <button class="btn btn-success text-right" id="btnDesasignarPermisos">Desasignar</button>
+	                        </p>
+		                    <table class="table table-condensed table-striped table-bordered table-hover no-margin" id="tblListaPermisosAsignadas">
+			                    <thead>
+				                    <tr>
+                                        <th>Permiso</th>
+                                        <th class="text-center" width="5%"><input type="checkbox" id="TodosDesAsignar" value="0"></th>
+				                    </tr>
+			                    </thead>
+			                    <tbody></tbody>
+		                    </table>                            
+	                    </div>
+                        <div class="well">
+		                    <table style="margin:0 auto;" id="PaginadorPermisosAsignadas">
+			                    <tbody>
+				                    <tr>
+					                    <td>Página</td>
+					                    <td>&nbsp;</td>
+					                    <td><button id="btnAnteriorPagina"><</button></td>
+					                    <td>&nbsp;</td>
+					                    <td><input type="text" id="txtPagina" value="1" style="width:25px;text-align:center;" /></td>
+					                    <td>&nbsp;</td>
+					                    <td><button id="btnSiguientePagina">></button></td>
+					                    <td>&nbsp;</td>
+					                    <td>De</td>
+					                    <td>&nbsp;</td>
+					                    <td><span id="lblPaginas">1</span> páginas</td>
+					                    <td>&nbsp;</td>
+					                    <td><span id="lblRegistros">0</span> resultados</td>
+				                    </tr>
+			                    </tbody>
+		                    </table>
+	                    </div>
+                    </div>   	                    
+                </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+			</div>
+		</div>
+	</div>
+</textarea>

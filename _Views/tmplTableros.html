@@ -1,0 +1,52 @@
+﻿<div id="modalTableros" class="modal fade" role="dialog" idMedidor="0">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Tableros</h4>
+			</div>
+			<div class="modal-body">
+                <div>
+                    <p style="margin-top:10px;">
+		                <button class="btn btn-success" id="btnObtenerFormaAgregarTablero">Agregar</button>
+	                </p>
+	                <div style="height:inherit;overflow: auto;">
+		                <table class="table table-condensed table-striped table-bordered table-hover no-margin" id="tblListaTableros">
+			                <thead>
+				                <tr>
+					                <th>Tablero</th>					
+					                <th class="hidden-xs hidden-sm">Activo</th>
+				                </tr>
+			                </thead>
+			                <tbody></tbody>
+		                </table>
+	                </div>
+	                <div class="well">
+		                <table id="PaginadorTableros" style="margin:0 auto;">
+			                <tbody>
+				                <tr>
+					                <td>Página</td>
+					                <td>&nbsp;</td>
+					                <td><button id="btnAnteriorPagina"><</button></td>
+					                <td>&nbsp;</td>
+					                <td><input type="text" id="txtPagina" value="1" style="width:25px;text-align:center;" /></td>
+					                <td>&nbsp;</td>
+					                <td><button id="btnSiguientePagina">></button></td>
+					                <td>&nbsp;</td>
+					                <td>De</td>
+					                <td>&nbsp;</td>
+					                <td><span id="lblPaginas">1</span> páginas</td>
+					                <td>&nbsp;</td>
+					                <td><span id="lblRegistros">0</span> resultados</td>
+				                </tr>
+			                </tbody>
+		                </table>
+	                </div>
+                </div>
+            </div>
+			<div class="modal-footer">
+
+			</div>
+		</div>
+	</div>
+</div>

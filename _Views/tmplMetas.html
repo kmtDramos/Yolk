@@ -1,0 +1,122 @@
+﻿<textarea id="modalMetasTmpl">
+	<div class="modal-dialog modal-lg" idCircuito="{$T.Datos.Circuito.IdCircuito}">
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h3>Metas</h3>
+			</div>
+			<div class="modal-body">
+                <div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <strong class="col-md-3">Circuito</strong>
+                            <label class="col-md-9 control-label" id="nombre">{$T.Datos.Circuito.Circuito}</label>
+                        </div>
+ 
+                        <div class="col-md-6 form-group">
+                            <strong class="col-md-3">Descripción:</strong>
+                            <label class="col-md-9 control-label" id="fechanacimiento">{$T.Datos.Circuito.Descripcion}</label>
+                        </div>
+                    </div>
+                   <div id="FiltroMeta" class="well bs-component panel-collapse collapse">
+                    <div class="row">
+                        <div class="col-md-4 form-group">
+				            <strong class="control-strong">Mes</strong>
+                            <select class="form-control input-sm" name='cmbFiltroMetaMes' id='cmbFiltroMetaMes'>
+					            <option value="0">-Seleccionar-</option>
+                                <option value="1">Enero</option>
+                                <option value="2">Febreo</option>
+                                <option value="3">Marzo</option>
+                                <option value="4">Abril</option>
+                                <option value="5">Mayo</option>
+                                <option value="6">Junio</option>
+                                <option value="7">Julio</option>
+                                <option value="8">Agosto</option>
+                                <option value="9">Septiembre</option>
+                                <option value="10">Octubre</option>
+                                <option value="11">Noviembre</option>
+                                <option value="12">Diciembre</option>
+                            </select>
+			            </div>
+                        <div class="col-md-4 form-group">
+				            <strong class="control-strong">Año</strong>
+                            <div id="txtFiltroMetaAnio" class="input-group date">
+                                    <input id="anio" type="text" class="form-control">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                             </div>
+			            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9 form-group">
+			            </div>	
+                        <div class="col-md-1 form-group">
+			                <p><a class="btn btn-success" href="" role="button" id="btnBuscarMeta">Buscar</a></p>
+			            </div>
+                        <div class="col-md-1 form-group">
+			                <p><a class="btn btn-success" href="" role="button" id="btnFiltroMetaLimpiar">Limpiar</a></p>
+			            </div>
+		            </div>
+                </div>
+
+	                <div class="row">
+                        <div class="col-md-6">
+                            <p style="margin-top:10px;">
+		                        <button class="btn btn-success" id="btnObtenerFormaAgregarMeta">Agregar</button>
+	                        </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p  class="text-right" style="margin-top:10px;">
+                                <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#FiltroMeta">
+                                    <span class="glyphicon glyphicon-cog"></span> Búsqueda avanzada
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+	                <div style="height:inherit;overflow: auto;">
+		                <table class="table table-condensed table-striped table-bordered table-hover no-margin" id="tblListaMetas">
+			                <thead>
+				                <tr>  
+									<th>Mes</th> 
+									<th>Año</th> 
+                                    <th class="text-center">Meta KwH por mes</th>
+									<th class="text-center">Meta Importe por mes</th>
+                                    <th class="text-center">Meta Horas de Uso por mes</th>
+									<th class="text-center">Editar</th>
+				                </tr>
+			                </thead>
+			                <tbody></tbody>
+		                </table>
+	                </div>
+	                <div class="well">
+		                <table style="margin:0 auto;" id="PaginadorMetas">
+			                <tbody>
+				                <tr>
+					                <td>Página</td>
+					                <td>&nbsp;</td>
+					                <td><button id="btnAnteriorPagina"><</button></td>
+					                <td>&nbsp;</td>
+					                <td><input type="text" id="txtPagina" value="1" style="width:25px;text-align:center;" /></td>
+					                <td>&nbsp;</td>
+					                <td><button id="btnSiguientePagina">></button></td>
+					                <td>&nbsp;</td>
+					                <td>De</td>
+					                <td>&nbsp;</td>
+					                <td><span id="lblPaginas">1</span> páginas</td>
+					                <td>&nbsp;</td>
+					                <td><span id="lblRegistros">0</span> resultados</td>
+				                </tr>
+			                </tbody>
+		                </table>
+	                </div>
+                </div>
+			</div>
+			<div class="modal-footer">
+
+			</div>
+		</div>
+
+	</div>
+</div>
+</textarea>

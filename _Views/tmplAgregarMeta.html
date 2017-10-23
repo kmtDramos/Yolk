@@ -1,0 +1,74 @@
+﻿<textarea id="modalAgregarMetaTmpl">
+	<div class="modal-dialog modal-lg" idCircuito="{$T.Dato.Valor}" >
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Agregar meta</h4>
+			</div>
+			<div class="modal-body">
+                <div class="container-fluid">
+                    <div class="well bs-component">
+                        <div class="row">
+                            <legend>Datos de la meta</legend>
+                            
+		                    <div class="col-md-4 form-group">
+				                <strong>Circuito</strong>
+								<label>{$T.Dato.Numero}</label>								
+			                </div>
+							<div class="col-md-4 form-group">
+				                <strong>Descripción</strong>
+								<label>{$T.Dato.Etiqueta}</label>								
+			                </div>
+						</div>
+						<div class="row">   
+                            <div class="col-md-4 form-group">
+				                <strong>Meta KwH</strong>
+                                <input type="text" name="txtMetaKwH" class="form-control" id="txtMetaKwH" value="{$T.Dato.MetaKwH}" placeholder="0.0000" onkeypress="validate(event)" onblur="clean(event)">
+			                </div>
+
+                            <div class="col-md-4 form-group">
+				                <strong>Meta Horas Uso</strong>
+                                <input type="text" name="txtMetaHorasUso" class="form-control" id="txtMetaHorasUso" value="{$T.Dato.MetaHorasUso}" placeholder="0.0000" onkeypress="validate(event)" onblur="clean(event)">
+			                </div>
+
+                            <div class="col-md-4 form-group">
+				                <strong>Meta Consumo</strong>
+                                <input type="text" name="txtMetaConsumo" class="form-control" id="txtMetaConsumo" value="{$T.Dato.MetaConsumo}" placeholder="0.0000" onkeypress="validate(event)" onblur="clean(event)">
+			                </div>	                    
+	                    </div>
+                        <div class="row">   
+                            <div class="col-md-4 form-group">
+				                <strong>Mes</strong>
+                                <select class="form-control input-sm" name="cmbMes" id="cmbMes">						            
+									<option value="0">-Seleccionar-</option>
+									<option value="1">Enero</option>
+									<option value="2">Febrero</option>
+									<option value="3">Marzo</option>
+									<option value="4">Abril</option>
+									<option value="5">Mayo</option>
+									<option value="6">Junio</option>
+									<option value="7">Julio</option>
+									<option value="8">Agosto</option>
+									<option value="9">Septiembre</option>
+									<option value="10">Octubre</option>
+									<option value="11">Noviembre</option>
+									<option value="12">Diciembre</option>
+								</select>
+			                </div>
+
+                            <div class="col-md-4 form-group">
+				                <strong>Año</strong>
+                                <input type="text" name="txtAnio" class="form-control" id="txtAnio" value="" >
+			                </div>	                    
+	                    </div>                   
+                    </div>
+                </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" id="btnAgregarMeta">Agregar</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

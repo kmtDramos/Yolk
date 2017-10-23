@@ -1,0 +1,125 @@
+﻿
+<style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {
+        height: inherit;
+    }
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+        padding-top: 20px;
+        background-color: #f1f1f1;
+        height: 100%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+        background-color: #555;
+        color: white;
+        padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+        .sidenav {
+            height: auto;
+            padding: 15px;
+        }
+
+        .row.content {
+            height: auto;
+        }
+    }
+</style>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="Inicio.aspx">
+                <img src="imgs/Logo-YOLK.jpg" height="40" alt="Medidor" border="0" style="border:none;margin:-10px;" />
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            [Menu]
+            <!--<ul class="nav navbar-nav">
+                 
+                <li><a href="Inicio.aspx">Inicio</a></li>
+                
+                
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Reportes<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Medicion.aspx">Medición</a></li>
+                        <li><a href="ReporteFueraDeRango.aspx">Estatus por Circuito</a></li>
+                    </ul>
+                </li>
+                
+                
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Administración<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Cliente.aspx">Cliente</a></li>
+                        <li><a href="Medidor.aspx">Medidor</a></li>
+                        <li><a href="Circuito.aspx">Circuito</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Operación<span class="caret"></span></a>
+                    <ul class="dropdown-menu"><li><a href="ReporteMantenimiento.aspx">Reporte Mantenimiento</a></li></ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Catálogos<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Tarifa.aspx">Tarifa</a></li>
+                        <li><a href="Pais.aspx">País</a></li>
+                        <li><a href="Estado.aspx">Estados</a></li>
+                        <li><a href="Municipio.aspx">Municipio</a></li>
+                        <li><a href="TipoProblema.aspx">Tipo de Problema</a></li>
+                        <li><a href="Problema.aspx">Problemas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Usuarios<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Usuario.aspx">Usuarios</a></li>
+                        <li><a href="Permiso.aspx">Permiso</a></li>
+                        <li><a href="Perfil.aspx">Perfil</a></li>
+                    </ul>
+                </li>
+                <li onclick="CerrarSesion();"><a href="#" onclick="return false;">Cerrar Sesion</a></li>
+            </ul>-->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" onclick="cambiarCliente();"><img src="[Logo]" height="40" alt="Cliente" border="0" style="border:none;margin:-10px;" /></a></li>
+                <li onclick="CerrarSesion();"><a href="#"><span class="glyphicon glyphicon-log-in"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid text-center ku-wrapper">
+    <div style="position:relative; width:inherit; height:100%">
+        <div class="row content">
+            <div class="col-sm-1 sidenav hidden-xs hidden-sm">
+            </div>
+            <div class="col-sm-10 text-left ku-contenido">
+                [Contenido]
+            </div>
+            <div class="col-sm-1 sidenav hidden-xs hidden-sm">
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="container-fluid text-center">
+    <p>&nbsp;</p>
+</footer>

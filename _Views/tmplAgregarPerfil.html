@@ -1,0 +1,40 @@
+﻿<textarea id="modalAgregarPerfilTmpl">
+	<div class="modal-dialog" >
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Agregar perfil</h4>
+			</div>
+			<div class="modal-body">
+                <div class="container-fluid">
+                    <div class="well bs-component">
+                        <div class="row">
+                            <legend>Datos del perfil</legend>
+
+                            <div class="col-md-6 form-group">
+				                <strong>Perfil</strong>
+                                <input type="text" id="txtPerfil" class="form-control" />
+			                </div>
+
+                            <div class="col-md-6 form-group">
+				                <strong class="control-strong">Pagina de inicio</strong>
+                                <select class="form-control input-sm" name='cmbPagina' id='cmbPagina'>
+						            <option value="0">-Seleccionar-</option>
+                                    {#foreach $T.Paginas as Pagina}                                                                           
+                                       <option {#if $T.Valor == $T.Pagina.Valor}selected="selected"{#/if} value="{$T.Pagina.Valor}">{$T.Pagina.Etiqueta}</option>                           
+                                    {#/for}
+                                </select>
+			                </div>
+                                         
+	                    </div>                   
+                    </div>
+                </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" id="btnAgregarPerfil">Agregar</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+			</div>
+		</div>
+
+	</div>
+</textarea>

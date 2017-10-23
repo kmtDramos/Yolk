@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Catalogo.Tablero.aspx.cs" Inherits="_Controls_Catalogo_Tablero" %>

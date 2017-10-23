@@ -1,0 +1,46 @@
+﻿<div>
+    <legend><h3>Usuarios</h3></legend>
+	<p style="margin-top:10px;">
+		<button class="btn btn-success" id="btnObtenerFormaAgregarUsuario">Agregar</button>
+	</p>
+	<div style="height:inherit;overflow: auto;">
+		<table class="table table-condensed table-striped table-bordered table-hover no-margin" id="tblListaUsuarios">
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Apellido Paterno</th>
+					<th>Apellido Materno</th>
+					<th>Perfil</th>
+					<th>Usuario</th>
+					<th class="hidden-xs hidden-sm">Correo</th>
+					<th class="text-center">Cambiar <br />contraseña</th>
+                    <th>Sucursales</th>
+                    <th>Editar</th>
+					<th class="hidden-xs hidden-sm">Activo</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+	<div class="well">
+		<table style="margin:0 auto;">
+			<tbody>
+				<tr>
+					<td>Página</td>
+					<td>&nbsp;</td>
+					<td><button id="btnAnteriorPagina"><</button></td>
+					<td>&nbsp;</td>
+					<td><input type="text" id="txtPagina" value="1" style="width:25px;text-align:center;" /></td>
+					<td>&nbsp;</td>
+					<td><button id="btnSiguientePagina">></button></td>
+					<td>&nbsp;</td>
+					<td>De</td>
+					<td>&nbsp;</td>
+					<td><span id="lblPaginas">1</span> páginas</td>
+					<td>&nbsp;</td>
+					<td><span id="lblRegistros">0</span> resultados</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

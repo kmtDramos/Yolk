@@ -1,0 +1,75 @@
+﻿<textarea id="modalClienteAsignadoUsuarioTmpl">
+	<div class="modal-dialog" idSucursalPredeterminada="{$T.IdSucursalPredeterminada}" >
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Sucursal predeterminada</h4>
+			</div>
+			<div class="modal-body">
+                <div class="container-fluid">
+                    <div class="well bs-component">
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+				                <strong class="control-strong">Empresa</strong>
+                                <select class="form-control input-sm" name='cmbClientePredeterminado' id='cmbClientePredeterminado'>
+                                    <option value="0" selected>Seleccionar</option>
+                                        {#foreach $T.Clientes as Cliente}                                                                           
+                                       <option {#if $T.IdClientePredeterminado == $T.Cliente.Valor}selected="selected"{#/if} value="{$T.Cliente.Valor}">{$T.Cliente.Etiqueta}</option>                           
+                                    {#/for}
+                                </select>
+			                </div>
+                            
+                            <div class="col-md-12 form-group">
+				                <strong class="control-strong">Pais</strong>
+                                <select class="form-control input-sm" name='cmbPaisPredeterminado' id='cmbPaisPredeterminado'>
+                                    <option value="0">Seleccionar</option> 
+                                    {#foreach $T.Paises as Pais}                                                                                                                 
+                                       <option {#if $T.IdPaisPredeterminado == $T.Pais.Valor}selected="selected"{#/if} value="{$T.Pais.Valor}">{$T.Pais.Etiqueta}</option>                           
+                                    {#/for}
+                                </select>
+			                </div>
+
+
+                            <div class="col-md-12 form-group">
+				                <strong class="control-strong">Estado</strong>
+                                <select class="form-control input-sm" name='cmbEstadoPredeterminado' id='cmbEstadoPredeterminado'>
+                                    <option value="0">Seleccionar</option> 
+                                    {#foreach $T.Estados as Estado}                                                                           
+                                       <option {#if $T.IdEstadoPredeterminado == $T.Estado.Valor}selected="selected"{#/if} value="{$T.Estado.Valor}">{$T.Estado.Etiqueta}</option>                           
+                                    {#/for}
+                                </select>
+			                </div>
+
+
+                            <div class="col-md-12 form-group">
+				                <strong class="control-strong">Municipio</strong>
+                                <select class="form-control input-sm" name='cmbMunicipioPredeterminado' id='cmbMunicipioPredeterminado'>
+                                    <option value="0">Seleccionar</option> 
+                                    {#foreach $T.Municipios as Municipio}                                                                           
+                                       <option {#if $T.IdMunicipioPredeterminado == $T.Municipio.Valor}selected="selected"{#/if} value="{$T.Municipio.Valor}">{$T.Municipio.Etiqueta}</option>                           
+                                    {#/for}
+                                </select>
+			                </div>
+
+                            <div class="col-md-12 form-group">
+				                <strong class="control-strong">Sucursal</strong>
+                                <select class="form-control input-sm" name='cmbSucursalPredeterminado' id='cmbSucursalPredeterminado'>
+                                    <option value="0">Seleccionar</option> 
+                                    {#foreach $T.Sucursales as Sucursal}                                                                           
+                                       <option {#if $T.IdSucursalPredeterminada == $T.Sucursal.Valor}selected="selected"{#/if} value="{$T.Sucursal.Valor}">{$T.Sucursal.Etiqueta}</option>                           
+                                    {#/for}
+                                </select>
+			                </div>
+                                                                            
+	                    </div>                   
+                    </div>
+                </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" id="btnEditarClientePredeterminado">Editar</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+			</div>
+		</div>
+
+	</div>
+</textarea>

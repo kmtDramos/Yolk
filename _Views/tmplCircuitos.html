@@ -1,0 +1,125 @@
+﻿<div>
+    <legend><h3>Circuitos</h3></legend>
+    <div id="FiltroCircuito" class="well bs-component panel-collapse collapse">        			
+		<div class="row">
+            <div class="col-md-4 form-group">
+				<strong class="control-strong">Cliente</strong>
+                <select class="form-control input-sm" name='cmbFiltroCliente' id='cmbFiltroCliente'>
+					<option value="0">-Seleccionar-</option>
+                </select>
+			</div>
+            <div class="col-md-4 form-group">
+				<strong>Pais</strong>
+				<select class="form-control input-sm" name='cmbFiltroPais' id='cmbFiltroPais'>
+					<option value="0">-Seleccionar-</option>
+                </select>
+			</div>
+            <div class="col-md-4 form-group">
+				<strong>Estado</strong>
+				<select class="form-control input-sm" name='cmbFiltroEstado' id='cmbFiltroEstado'>
+					<option value="0">-Seleccionar-</option>
+                </select>
+			</div>
+            <div class="col-md-4 form-group">
+				<strong>Municipio</strong>
+				<select class="form-control input-sm" name='cmbFiltroMunicipio' id='cmbFiltroMunicipio'>
+					<option value="0">-Seleccionar-</option>
+                </select>
+			</div>
+            <div class="col-md-4 form-group">
+				<strong>Sucursal</strong>
+				<select class="form-control input-sm" name='cmbFiltroSucursal' id='cmbFiltroSucursal'>
+					<option value="0">-Seleccionar-</option>
+                </select>
+			</div>
+            <div class="col-md-4 form-group">
+				<strong>Medidor</strong>
+				<select class="form-control input-sm" name='cmbFiltroMedidor' id='cmbFiltroMedidor'>
+					<option value="0">-Seleccionar-</option>
+                </select>
+			</div>
+            <div class="col-md-4 form-group">
+				<strong>Tablero</strong>
+				<select class="form-control input-sm" name='cmbFiltroTablero' id='cmbFiltroTablero'>
+					<option value="0">-Seleccionar-</option>
+                </select>
+			</div>
+            <div class="col-md-4 form-group">
+				<strong>Circuito</strong>
+				<input class="form-control input-sm" id="txtFiltroCircuito" name="txtFiltroCircuito" type="text">
+			</div>
+			<div class="col-md-4 form-group">
+				<strong>Descripción</strong>
+				<input class="form-control input-sm" id="txtFiltroDescripcion" name="txtFiltroDescripcion" type="text">
+			</div>
+		</div>
+        <div class="row">
+            <div class="col-md-10 form-group">
+			</div>	
+            <div class="col-md-1 form-group">
+			    <p><a class="btn btn-success" href="" role="button" id="btnBuscarCircuito">Buscar</a></p>
+			</div>
+            <div class="col-md-1 form-group">
+			    <p><a class="btn btn-success" href="" role="button" id="btnLimpiarFiltroCircuito">Limpiar</a></p>
+			</div>
+
+		</div>
+	</div>
+	
+
+    <div class="row">
+        <div class="col-md-6">
+            <p style="margin-top:10px;">
+		        <button class="btn btn-success" id="btnObtenerFormaAgregarCircuito">Agregar</button>
+	        </p>
+        </div>
+        <div class="col-md-6">
+            <p  class="text-right" style="margin-top:10px;">
+                <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#FiltroCircuito">
+                    <span class="glyphicon glyphicon-cog"></span> Búsqueda avanzada
+                </button>
+            </p>
+        </div>
+    </div>
+
+    <div style="height:inherit;overflow: auto;">
+		<table class="table table-condensed table-striped table-bordered table-hover no-margin" id="tblListaCircuitos">
+			<thead>
+				<tr>
+                    <th class="hidden-xs hidden-sm">Cliente</th>
+                    <th>Sucursal</th>
+                    <th  class="hidden-xs hidden-sm">Medidor</th>
+                    <th>Tablero</th>
+                    <th>Circuito</th>
+                    <th>Descripcion</th>
+					<th width="5%">Imagen</th>
+                    <th width="5%">Metas</th>
+					<th width="5%">Editar</th>					
+					<th width="5%">Activo</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+	<div class="well">
+		<table style="margin:0 auto;" id="PaginadorCircuitos">
+			<tbody>
+				<tr>
+					<td>Página</td>
+					<td>&nbsp;</td>
+					<td><button id="btnAnteriorPagina"><</button></td>
+					<td>&nbsp;</td>
+					<td><input type="text" id="txtPagina" value="1" style="width:25px;text-align:center;" /></td>
+					<td>&nbsp;</td>
+					<td><button id="btnSiguientePagina">></button></td>
+					<td>&nbsp;</td>
+					<td>De</td>
+					<td>&nbsp;</td>
+					<td><span id="lblPaginas">1</span> páginas</td>
+					<td>&nbsp;</td>
+					<td><span id="lblRegistros">0</span> resultados</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

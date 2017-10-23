@@ -1,0 +1,209 @@
+﻿<div style="height:inherit;overflow: auto;">
+	<div style="margin-top:10px;">
+	</div>
+	<div>
+        <h2>Medición</h2>
+		<div class="row" style="width:99%;margin-bottom: 5px;border-bottom: solid 3px;border-top: solid 3px;">
+			<div class="col-md-3 verticalLine" style="border-left: 1px solid #BBB;padding-top: 5px;padding-bottom: 5px;margin: 8px 0px 8px 0px;">
+				<strong>Filtros</strong>
+				<table class="ku-table" width="100%">
+					<tbody>
+						<tr>
+							<td>Cliente:</td>
+							<td width="120">
+								<select id="cmbCliente" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+                        <tr>
+							<td>Pais:</td>
+							<td width="120">
+								<select id="cmbPais" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+                        <tr>
+							<td>Estado:</td>
+							<td width="120">
+								<select id="cmbEstado" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+                        <tr>
+							<td>Municipio:</td>
+							<td width="120">
+								<select id="cmbMunicipio" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Sucursal:</td>
+							<td>
+								<select id="cmbSucursal" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Tablero:</td>
+							<td>
+								<select id="cmbTablero" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Circuito:</td>
+							<td>
+								<select id="cmbCircuito" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Fecha inicio:</td>
+							<td>                               
+                                <div id='txtFechaInicio' class='input-group date'>
+                                    <input id="inicio" type='text' class="formato form-control"  />
+                                    <span class="formato input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                                
+							</td>
+						</tr>
+						<tr>
+							<td>Fecha fin:</td>
+							<td>								
+                                <div id='txtFechaFin' class='input-group date'>
+                                    <input id="fin" type='text' class="formato form-control"  />
+                                    <span class="formato input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<button id="btnActualizar" class="btn btn-primary btn-block">Actualizar</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-9" style="margin: 8px 0; padding-top: 8px;">
+                <div class="col-md-6">
+                    <strong>Gráfica</strong>
+                </div>
+                <div class="col-md-6">
+                    <div id="legend" class="bar-legend"></div>
+                </div>
+                <div class="col-md-12">				    
+				    <div class="row">					    
+					    <div class="col-md-4"><div id="gfcKwH" style="width:250px;height:200px;"></div></div>
+                        <div class="col-md-4"><div id="gfcHoras" style="width:250px;height:200px;"></div></div>
+					    <div class="col-md-4"><div id="gfcConsumo" style="width:250px;height:200px;"></div></div>					
+				    </div>
+                </div>
+			</div>
+		</div>
+        
+
+        <div style="height:inherit;overflow: auto;">
+        <table class="ku-table table-striped" id="tblDetalle">
+			<thead>
+                <tr>
+					<th colspan="10"></th>
+					<th colspan="3">Consumo KwH</th>
+                    <th colspan="3">Consumo Horas</th>
+					<th colspan="3">Consumo Importe</th>
+				</tr>
+				<tr>
+					<th>Pais</th>
+					<th>Estado</th>
+					<th>Municipio</th>
+					<th>Cliente</th>
+					<th>Nombre Sucursal</th>
+					<th># Sucursal</th>
+					<th># Tablero</th>
+					<th># Circuito</th>
+					<th>Descripción circuito</th>
+					<th>Fecha medición</th>
+					<th>Objetivo del mes</th>
+					<th>Real</th>
+					<th>Diferencia</th>
+                    <th>Objetivo del mes</th>
+					<th>Real</th>
+					<th>Diferencia</th>
+					<th>Objetivo del mes</th>
+					<th>Real</th>
+					<th>Diferencia</th>					
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+	<div class="well">
+		<table style="margin:0 auto;" id="PaginadorMediciones">
+			<tbody>
+				<tr>
+					<td>Página</td>
+					<td>&nbsp;</td>
+					<td><button id="btnAnteriorPagina"><</button></td>
+					<td>&nbsp;</td>
+					<td><input type="text" id="txtPagina" value="1" style="width:25px;text-align:center;" /></td>
+					<td>&nbsp;</td>
+					<td><button id="btnSiguientePagina">></button></td>
+					<td>&nbsp;</td>
+					<td>De</td>
+					<td>&nbsp;</td>
+					<td><span id="lblPaginas">1</span> páginas</td>
+					<td>&nbsp;</td>
+					<td><span id="lblRegistros">0</span> resultados</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+		<!--<div style="width:100%; overflow: auto;">
+			<strong>Detalle</strong>
+			<table class="ku-table table-striped" id="tblDetalle">
+				<thead>
+					<tr>
+						<th colspan="10"></th>
+						<th colspan="3">Consumo KwH</th>
+                        <th colspan="3">Consumo Horas</th>
+						<th colspan="3">Consumo Importe</th>
+					</tr>
+					<tr>
+						<th>Pais</th>
+						<th>Estado</th>
+						<th>Municipio</th>
+						<th>Cliente</th>
+						<th>Nombre Sucursal</th>
+						<th># Sucursal</th>
+						<th># Tablero</th>
+						<th># Circuito</th>
+						<th>Descripción circuito</th>
+						<th>Fecha medición</th>
+						<th>Objetivo del mes</th>
+						<th>Real</th>
+						<th>Diferencia</th>
+                        <th>Objetivo del mes</th>
+						<th>Real</th>
+						<th>Diferencia</th>
+						<th>Objetivo del mes</th>
+						<th>Real</th>
+						<th>Diferencia</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>-->
+	</div>
+</div>

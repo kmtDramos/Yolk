@@ -1,0 +1,97 @@
+﻿<textarea id="modalUsuarioSucursalesTmpl">
+	<div class="modal-dialog modal-lg" idUsuario="{$T.Datos.IdUsuario}" >
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<button id="btnCerrarUsuarioSucursal" type="button" class="close">&times;</button>
+				<h4 class="modal-title">Asignar sucursales</h4>
+			</div>
+			<div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 form-group"> 
+                    <h4>Sucursales disponibles</h4>
+                    <div style="height:inherit;overflow: auto;">
+                        <p style="margin-top:10px; text-align:right;">
+		                    <button class="btn btn-success text-right" id="btnAsignarSucursales">Asignar</button>
+	                    </p>
+		                <table class="table table-condensed table-striped table-bordered table-hover no-margin" id="tblListaSucursalesDisponibles">
+			                <thead>
+				                <tr>
+                                    <th>Cliente</th>
+                                    <th>Sucursal</th>
+                                    <th class="text-center" width="5%"><input type="checkbox" id="TodosAsignar" value="0"/></th>
+				                </tr>
+			                </thead>
+			                <tbody></tbody>
+		                </table>
+	                </div>
+                    <div class="well">
+		                <table style="margin:0 auto;" id="PaginadorSucursalesDisponibles">
+			                <tbody>
+				                <tr>
+					                <td>Página</td>
+					                <td>&nbsp;</td>
+					                <td><button id="btnAnteriorPagina"><</button></td>
+					                <td>&nbsp;</td>
+					                <td><input type="text" id="txtPagina" value="1" style="width:25px;text-align:center;" /></td>
+					                <td>&nbsp;</td>
+					                <td><button id="btnSiguientePagina">></button></td>
+					                <td>&nbsp;</td>
+					                <td>De</td>
+					                <td>&nbsp;</td>
+					                <td><span id="lblPaginas">1</span> páginas</td>
+					                <td>&nbsp;</td>
+					                <td><span id="lblRegistros">0</span> resultados</td>
+				                </tr>
+			                </tbody>
+		                </table>
+	                </div>                         
+                    </div>
+
+                    <div class="col-md-6 form-group"> 
+                        <h4>Sucursales asignadas</h4>
+                        <div style="height:inherit;overflow: auto;">
+                            <p style="margin-top:10px; text-align:right;">
+		                        <button class="btn btn-success text-right" id="btnDesasignarSucursales">Desasignar</button>
+	                        </p>
+		                    <table class="table table-condensed table-striped table-bordered table-hover no-margin" id="tblListaSucursalesAsignadas">
+			                    <thead>
+				                    <tr>
+                                        <th width="5%">Determinada</th>
+                                        <th>Cliente</th>
+                                        <th>Sucursal</th>
+                                        <th class="text-center" width="5%"><input type="checkbox" id="TodosDesAsignar" value="0"></th>
+				                    </tr>
+			                    </thead>
+			                    <tbody></tbody>
+		                    </table>                            
+	                    </div>
+                        <div class="well">
+		                    <table style="margin:0 auto;" id="PaginadorSucursalesAsignadas">
+			                    <tbody>
+				                    <tr>
+					                    <td>Página</td>
+					                    <td>&nbsp;</td>
+					                    <td><button id="Button1"><</button></td>
+					                    <td>&nbsp;</td>
+					                    <td><input type="text" id="txtPagina" value="1" style="width:25px;text-align:center;" /></td>
+					                    <td>&nbsp;</td>
+					                    <td><button id="Button2">></button></td>
+					                    <td>&nbsp;</td>
+					                    <td>De</td>
+					                    <td>&nbsp;</td>
+					                    <td><span id="lblPaginas">1</span> páginas</td>
+					                    <td>&nbsp;</td>
+					                    <td><span id="lblRegistros">0</span> resultados</td>
+				                    </tr>
+			                    </tbody>
+		                    </table>
+	                    </div>
+                    </div>   	                    
+                </div>
+			</div>
+			<div class="modal-footer">
+				<!--<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>-->
+			</div>
+		</div>
+	</div>
+</textarea>

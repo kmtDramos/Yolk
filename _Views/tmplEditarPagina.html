@@ -1,0 +1,54 @@
+﻿<textarea id="modalEditarPaginaTmpl">
+	<div class="modal-dialog modal-lg" idPagina="{$T.Dato.IdPagina}" >
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Editar Página</h4>
+			</div>
+			<div class="modal-body">
+                <div class="container-fluid">
+                    <div class="well bs-component">
+                        <div class="row">
+                            <legend>Datos de la página</legend>
+                            <div class="col-md-6 form-group">
+				                <strong class="control-strong">Página</strong>
+								<input type="text" id="txtPagina" class="form-control" value="{$T.Dato.Pagina}" />
+			                </div>
+
+                            <div class="col-md-6 form-group">
+				                <strong class="control-strong">Descripción</strong>
+								<input type="text" id="txtDescripcion" class="form-control" value="{$T.Dato.Descripcion}" />
+			                </div>
+
+                            <div class="col-md-6 form-group">
+				                <strong class="control-strong">Menú</strong>
+								<select id="cmbMenu" class="form-control input-sm">
+                                    <option value="0">-Seleccionar-</option>
+                                    {#foreach $T.Dato.Menus as Menu}                                                                           
+                                        <option {#if $T.Dato.IdMenu == $T.Menu.Valor}selected="selected"{#/if} value="{$T.Menu.Valor}">{$T.Menu.Etiqueta}</option>                           
+                                    {#/for}
+                                </select>
+			                </div>
+
+                            <div class="col-md-6 form-group">
+				                <strong class="control-strong">Permiso</strong>
+								<select id="cmbPermiso" class="form-control input-sm">
+                                    <option value="0">-Seleccionar-</option>
+                                    {#foreach $T.Dato.Permisos as Permiso}                                                                           
+                                        <option {#if $T.Dato.IdPermiso == $T.Permiso.Valor}selected="selected"{#/if} value="{$T.Permiso.Valor}">{$T.Permiso.Etiqueta}</option>                           
+                                    {#/for}
+                                </select>
+			                </div>
+
+                         </div>                   
+                    </div>
+                </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" id="btnEditarPagina">Editar</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+			</div>
+		</div>
+
+	</div>
+</textarea>

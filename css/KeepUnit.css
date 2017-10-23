@@ -1,0 +1,184 @@
+﻿body {
+	background-color: #555555;
+}
+
+.ku-wrapper{
+	position: absolute;
+	top: 50px;
+	right: 0px;
+	bottom: 50px;
+	left: 0px;
+	background-color: #ffffff;
+}
+
+.ku-contenido{
+	background-color: #ffffff;
+	height: 100%;
+	overflow: auto;
+}
+
+.ku-clickable{
+	cursor:pointer;
+}
+
+
+.ku-table{
+	border: 1px solid #BBB;
+    font-size:13px;
+}
+
+
+.ku-table th, .ku-table td{
+	border: 1px solid #BBB;
+}
+
+.ku-table th{
+	text-align: center;
+}
+
+.shade {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	background-color: RGBA(25,25,25,0.4);
+}
+
+.loader {
+	margin: 25% auto;
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #3498db;
+	width: 27px;
+	height: 27px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+
+.huge{
+    font-size:47px;
+}
+
+#legend {
+	/*height: 26px;*/
+    text-align:right;
+}
+#legend span {
+	display: inline-block;
+	padding: 0px 5px;
+	position: relative;
+}
+#legend span:after {
+	padding-left: 4px;
+	content: '\00a0\00a0\00a0\00a0\00a0\00a0';
+}
+
+.bar-legend > span {
+    display: inline-block;
+    margin-right: 0px;
+}
+
+.bar-legend > span p
+{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-anchor: middle;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 12px;
+    line-height: normal;
+    font-family: sans-serif;
+    color:#888;
+}
+
+.bar-legend > span:last-child {
+  margin-right: 0;
+}
+
+.bar-legend > span > i {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 7px;
+  margin-top: -3px;
+  vertical-align: middle;
+  border-radius: 1px;
+}
+
+.hrFuerte
+{
+    border:2px solid black;
+    margin-top: 20px;
+}
+
+.verticalLine {
+  border-right: 3px solid black;
+}
+
+.separadores {
+  border-right: 3px solid black;
+}
+
+.formato.form-control
+{
+    padding:10px 0px !important;
+    font-size:13px !important;
+    height:18px !important;
+    position: relative;
+}
+.formato.input-group-addon
+{
+    padding:0px !important;
+
+}
+
+.input-group .form-control
+{
+    z-index:0;
+}
+.navbar-inverse .navbar-nav > li > a
+{
+    color:white;
+}
+.navbar-inverse .navbar-nav > li > a:hover
+{
+    color:#BBB;
+}
+
+.invoice-title h2, .invoice-title h3 {
+    display: inline-block;
+}
+
+.quitaEspacio p
+{
+    margin: 0 0 4px 0;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,103 @@
+﻿<div id="modalAgregarTarifa" class="modal fade" role="dialog">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Agregar Tarifa</h4>
+			</div>
+			<div class="modal-body">
+                <div class="container-fluid">
+                    <div class="well bs-component">
+                        <div class="row">
+                            <legend>Datos de la tarifa</legend>
+							<div class="col-md-3 form-group">
+								<strong class="control-strong">Fuente</strong>
+								<select class="form-control input-sm" id="cmbFuente" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+							</div>
+                            <div class="col-md-3 form-group">
+                                <strong class="control-strong">Tipo tarifa</strong>
+								<select class="form-control input-sm" id="cmbTipoTarifa" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+			                </div>
+                            <div class="col-md-3 form-group">
+                                <strong class="control-strong">Tipo tensión</strong>
+								<select class="form-control input-sm" id="cmbTipoTension" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+			                </div>
+                            <div class="col-md-3 form-group">
+                                <strong class="control-strong">Tipo cuota</strong>
+								<select class="form-control input-sm" id="cmbTipoCuota" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+			                </div>
+		                    <div class="col-md-3 form-group">
+                                <strong class="control-strong">Región</strong>
+								<select class="form-control input-sm" id="cmbRegion" style="width:100%;">
+									<option value="0">-Seleccionar-</option>
+								</select>
+			                </div>
+                            <div class="col-md-3 form-group">
+                                <strong class="control-strong">Consumo Baja</strong>
+                                <input type="text" name="txtConsumoBaja" class="form-control" id="txtConsumoBaja" value="0.0000" placeholder="$0.0000" onkeypress="validate(event)" onblur="clean(event)">
+			                </div>
+                            <div class="col-md-3 form-group">
+                                <strong class="control-strong">Consumo Media</strong>
+                                <input type="text" name="txtConsumoMedia" class="form-control" id="txtConsumoMedia" value="0.0000" placeholder="$0.0000" onkeypress="validate(event)" onblur="clean(event)">
+			                </div>
+                            <div class="col-md-3 form-group">
+                                <strong class="control-strong">Consumo Alta</strong>
+                                 <input type="text" name="txtConsumoAlta" class="form-control" id="txtConsumoAlta" value="0.0000" placeholder="$0.0000" onkeypress="validate(event)" onblur="clean(event)">
+			                </div>
+                            <div class="col-md-3 form-group">
+                                <strong class="control-strong">Demanda</strong>
+                                 <input type="text" name="txtDemanda" class="form-control" id="txtDemanda" value="0.0000" placeholder="$0.0000" onkeypress="validate(event)" onblur="clean(event)">
+			                </div>
+                            <!--<div class="col-md-3 form-group">
+                                <strong class="control-strong">Fecha</strong>
+								<div id='txtFecha' class='input-group date'>
+                                    <input id="inicio" type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+			                </div>-->
+							<div>
+								<div class="col-md-3 form-group">
+									<strong class="control-strong">Mes</strong>
+									<select class="form-control input-sm" name="cmbMes" id="cmbMes">
+										<option value="0">-Seleccionar-</option>
+										<option value="1">Enero</option>
+										<option value="2">Febrero</option>
+										<option value="3">Marzo</option>
+										<option value="4">Abril</option>
+										<option value="5">Mayo</option>
+										<option value="6">Junio</option>
+										<option value="7">Julio</option>
+										<option value="8">Agosto</option>
+										<option value="9">Septiembre</option>
+										<option value="10">Octubre</option>
+										<option value="11">Noviembre</option>
+										<option value="12">Diciembre</option>
+									</select>
+								</div>
+								<div class="col-md-3 form-group">
+									<strong class="control-strong">Año</strong>
+									<input type="text" name="txtAnio" class="form-control" id="txtAnio" value="">
+								</div>
+							</div> 
+						</div>                   
+                    </div>
+                </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" id="btnAgregarTarifa">Agregar</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+			</div>
+		</div>
+
+	</div>
+</div>

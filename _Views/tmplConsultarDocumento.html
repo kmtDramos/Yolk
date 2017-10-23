@@ -1,0 +1,52 @@
+﻿<textarea id="modalConsultarDocumentoTmpl">
+	<div class="modal-dialog modal-lg" idReporte="{$T.Reporte.IdReporte}" >
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Agregar documento</h4>
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid">
+                    {#if $T.Reporte.IdEstatus != 4 &&  $T.Reporte.Bandera==1 } 
+					    <div class="well bs-component">
+						    <div class="row">
+							    <legend>Datos del documento</legend>
+                                <div class="col-md-12 form-group">
+                                    <strong>Agregar documento</strong>
+                                    <div class="fileUpload btn btn-primary">
+                                        <span>Cargar</span>
+                                        <input id="fileupload" class="upload" type="file" name="files[]" multiple style="width:350px; height:20px;" /> 
+                                    
+                                    </div>
+                                    <div id="files" class="files"></div>
+                                </div>
+						    </div>
+                        </div>
+                    {#/if}
+                    <div style="height:inherit;overflow: auto;">
+						<table id="tblListaDocumentos" class="table table-condensed table-hover no-margin">
+							<thead class="thead-inverse">
+							<tr>
+								<th colspan="4">Lista de documentos</th>
+							</tr>
+							</thead>
+							<tbody>
+                                {#foreach $T.Reporte.Documentos as Documento}                                                                              
+                                    <tr id="renglon-{$T.Documento.IdReporteDocumento}">
+							            <td style="width:20px;padding:auto;"><span id="descargarDocumento" class="ku-clickable glyphicon glyphicon-download" Documento="{$T.Documento.IdReporteDocumento}" /></span></td>
+							            <td class="">{$T.Documento.Documento}</td>
+							            <td class="">{$T.Documento.Descripcion}</td>
+							            <td style="width:20px;padding:auto;">{#if $T.Reporte.IdEstatus != 4 && $T.Reporte.Bandera==1} <span id="eliminarDocumento" class="ku-clickable glyphicon glyphicon-trash" Documento="{$T.Documento.IdReporteDocumento}" /></span>{#/if}</td>
+						            </tr>
+                                {#/for}
+							</tbody>
+						</table>
+                    </div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+			</div>
+		</div>
+	</div>
+</textarea>

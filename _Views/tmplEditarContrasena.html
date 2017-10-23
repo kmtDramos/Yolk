@@ -1,0 +1,31 @@
+﻿<textarea id="modalEditarContrasenaTmpl">
+	<div class="modal-dialog" idUsuario="{$T.Dato.IdUsuario}" >
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Editar contraseña</h4>
+			</div>
+			<div class="modal-body">
+                <div class="container-fluid">
+                    <div class="well bs-component">
+                        <div class="row">                            
+		                    <div class="col-md-6 form-group">
+				                <strong>Usuario</strong>
+                                <input type="text" id="txtUsuario" class="form-control" value="{$T.Dato.Usuario}" disabled/>
+			                </div>
+                            
+                            <div class="col-md-6 form-group">
+				                <strong>Contraseña</strong>
+                                <input type="text" id="txtContrasena" class="form-control" value="{$T.Dato.Contrasena}" />
+			                </div>  	                    
+	                    </div>                   
+                    </div>
+                </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" id="btnEditarContrasena">Editar</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+			</div>
+		</div>
+	</div>
+</textarea>

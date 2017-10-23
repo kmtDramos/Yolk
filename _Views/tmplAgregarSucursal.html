@@ -1,0 +1,77 @@
+﻿<div id="modalAgregarSucursal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Agregar sucursal</h4>
+			</div>
+			<div class="modal-body">
+                <div class="container-fluid">
+                    <div class="well bs-component">
+                        <div class="row">
+                            <legend>Datos de la sucursal</legend>
+		                    <div class="col-md-12 form-group">
+				                <strong>Sucursal</strong>
+
+                                <input type="text" id="txtSucursal" class="form-control" />
+			                </div>
+
+                            <div class="col-md-4 form-group">
+				                <strong class="control-strong">País</strong>
+                                <select class="form-control input-sm" name='cmbPais' id='cmbPais'>
+						            <option value="0">-Seleccionar-</option>
+                                </select>
+			                </div>
+		                    <div class="col-md-4 form-group">
+			                    <strong class="control-strong">Estado</strong>
+				                <select class="form-control input-sm" name='cmbEstado' id='cmbEstado'>
+						            <option value="0">-Seleccionar-</option>
+                                </select>
+		                    </div>
+		                    <div class="col-md-4 form-group">
+			                    <strong class="control-strong">Municipio</strong>
+				                <select class="form-control input-sm" name='cmbMunicipio' id='cmbMunicipio'>
+						            <option value="0">-Seleccionar-</option>
+                                </select>
+		                    </div>
+                            <legend>Datos de la tarifa</legend>
+		                    <div class="col-md-4 form-group">
+			                    <strong class="control-strong">Tipo tarifa</strong>
+				                <select class="form-control input-sm" name='cmbTipoTarifa' id='cmbTipoTarifa'>
+						            <option value="0">-Seleccionar-</option>
+                                </select>
+		                    </div>
+
+                            <div class="col-md-4 form-group">
+			                    <strong class="control-strong">Tipo tensión</strong>
+				                <select class="form-control input-sm" name='cmbTipoTension' id='cmbTipoTension'>
+						            <option value="0">-Seleccionar-</option>
+                                </select>
+		                    </div>
+
+                            <div class="col-md-4 form-group">
+			                    <strong class="control-strong">Tipo cuota</strong>
+				                <select class="form-control input-sm" name='cmbTipoCuota' id='cmbTipoCuota'>
+						            <option value="0">-Seleccionar-</option>
+                                </select>
+		                    </div>
+
+                            <div class="col-md-4 form-group">
+			                    <strong class="control-strong">Region</strong>
+				                <select class="form-control input-sm" name='cmbRegion' id='cmbRegion'>
+						            <option value="0">-Seleccionar-</option>
+                                </select>
+		                    </div>
+
+	                    </div>                   
+                    </div>
+                </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" id="btnAgregarSucursal">Agregar</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+			</div>
+		</div>
+
+	</div>
+</div>

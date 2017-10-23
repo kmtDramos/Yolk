@@ -1,0 +1,52 @@
+﻿<textarea id="modalEditarMetaTmpl">
+	<div class="modal-dialog modal-lg" idCircuito="{$T.Dato.IdCircuito}" idMeta="{$T.Dato.IdMeta}" >
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Editar meta</h4>
+			</div>
+			<div class="modal-body">
+                <div class="container-fluid">
+                    <div class="well bs-component">
+                        <div class="row">
+                            <legend>Datos de la meta</legend>
+                            
+		                    <div class="col-md-4 form-group">
+				                <strong>Circuito</strong>
+								<label>{$T.Dato.Circuito}</label>								
+			                </div>
+							
+							<div class="col-md-4 form-group">
+				                <strong>Descripción</strong>
+								<label>{$T.Dato.Descripcion}</label>
+								
+			                </div>
+						</div>
+                        <div class="row">   
+                            <div class="col-md-4 form-group">
+				                <strong>Meta KwH</strong>
+                                <input type="text" name="txtMetaKwH" class="form-control" id="txtMetaKwH" value="{$T.Dato.MetaKwH}" placeholder="0.0000" onkeypress="validate(event)" onblur="clean(event)">
+			                </div>
+
+                            <div class="col-md-4 form-group">
+				                <strong>Meta Importe</strong>
+                                <input type="text" name="txtMetaConsumo" class="form-control" id="txtMetaConsumo" value="{$T.Dato.MetaConsumo}" placeholder="0.0000" onkeypress="validate(event)" onblur="clean(event)">
+			                </div>
+                            
+                            
+                            <div class="col-md-4 form-group">
+				                <strong>Meta Horas Uso</strong>
+                                <input type="text" name="txtMetaHorasUso" class="form-control" id="txtMetaHorasUso" value="{$T.Dato.MetaHorasUso}" placeholder="0.0000" onkeypress="validate(event)" onblur="clean(event)">
+			                </div>	                    
+	                    </div>                   
+                    </div>
+                </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" id="btnEditarMeta">Editar</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

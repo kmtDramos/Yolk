@@ -1,0 +1,86 @@
+﻿<textarea id="modalEditarUsuarioTmpl">
+
+	<div class="modal-dialog modal-lg" idUsuario="{$T.Dato.IdUsuario}">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Editar usuario</h4>
+			</div>
+			<div class="modal-body">
+			    <div class="container-fluid">
+                    <div class="well bs-component">
+                        <div class="row">
+                            <div class="col-md-3 form-group">					            
+						        <label for="txtUsuario">*Usuario:</label>
+						        <input type="text" id="txtUsuario" class="form-control" value="{$T.Dato.Usuario}" disabled />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4 form-group">
+						        <label for="">*Nombre:</label>
+						        <input type="text" id="txtNombre" class="form-control" value="{$T.Dato.Nombre}" />
+                            </div>
+
+                            <div class="col-md-4 form-group">
+						        <label for="">*Apellido paterno:</label>
+						        <input type="text" id="txtApellidoPaterno" class="form-control" value="{$T.Dato.ApellidoPaterno}" />
+					        </div>
+                            
+                            <div class="col-md-4 form-group">
+						        <label for="">Apellido materno</label>
+						        <input type="text" id="txtApellidoMaterno" class="form-control" value="{$T.Dato.ApellidoMaterno}" />
+                            </div>
+
+                            <div class="col-md-4 form-group">
+						        <label for="">*Correo:</label>
+						        <input type="text" id="txtCorreo" class="form-control" value="{$T.Dato.Correo}" />
+					        </div>
+
+                            <div class="col-md-4 form-group">
+								<label for="">*Jefe inmediato</label>
+								<select class="form-control input-sm" name='cmbJefeInmediato' id='cmbJefeInmediato'>
+						            <option value="0">-Seleccionar-</option>
+						            {#foreach $T.Jefes as Usuario}                                                                           
+                                       <option {#if $T.Dato.IdUsuarioJefe == $T.Usuario.Valor}selected="selected"{#/if} value="{$T.Usuario.Valor}">{$T.Usuario.Etiqueta}</option>                           
+                                    {#/for}
+                                </select>
+							</div>
+
+							<div class="col-md-4 form-group">
+								<label for="">Responsable sucursal.</label><br />
+								<input type="checkbox" id="EsResponsableSucursal" value="" {#if $T.Dato.EsResponsableSucursal == "True"}checked {#/if}>
+							</div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 form-group">
+                                <label for="">*Perfil:</label>
+                                <select class="form-control input-sm" name='cmbPerfil' id='cmbPerfil'>
+						            <option value="0">-Seleccionar-</option>
+						            {#foreach $T.Perfiles as Perfil}                                                                           
+                                       <option {#if $T.Dato.IdPerfil == $T.Perfil.Valor}selected="selected"{#/if} value="{$T.Perfil.Valor}">{$T.Perfil.Etiqueta}</option>                           
+                                    {#/for}
+                                </select>
+                            </div>
+							 <div id="divProveedor" class="hidden col-md-4 form-group">
+                                <label for="">*Proveedor:</label>
+                                <select class="form-control input-sm" name='cmbProveedor' id='cmbProveedor'>
+						            <option value="0">-Seleccionar-</option>
+						            {#foreach $T.Proveedores as Proveedor}                                                                           
+                                       <option {#if $T.Dato.IdProveedor == $T.Proveedor.Valor}selected="selected"{#/if} value="{$T.Proveedor.Valor}">{$T.Proveedor.Etiqueta}</option>                           
+                                    {#/for}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" id="btnEditarUsuario">Editar</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+			</div>
+		</div>
+	</div>
+
+</textarea>

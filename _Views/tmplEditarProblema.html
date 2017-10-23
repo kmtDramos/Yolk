@@ -1,0 +1,39 @@
+﻿<textarea id="modalEditarProblemaTmpl">
+	<div class="modal-dialog" idProblema="{$T.Dato.IdProblema}" >
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Editar Problema</h4>
+			</div>
+			<div class="modal-body">
+                <div class="container-fluid">
+                    <div class="well bs-component">
+                        <div class="row">
+                            <legend>Datos del problema</legend>
+                            
+                            <div class="col-md-12 form-group">
+				                <strong class="control-strong">Tipo problema</strong>
+                                <select class="form-control input-sm" name='cmbTipoProblema' id='cmbTipoProblema'>
+						            <option value="0">-Seleccionar-</option>
+                                    {#foreach $T.TipoProblemas as TipoProblema}                                                                           
+                                       <option {#if $T.Dato.IdTipoProblema == $T.TipoProblema.Valor} selected="selected" {#/if} value="{$T.TipoProblema.Valor}">{$T.TipoProblema.Etiqueta}</option>                           
+                                    {#/for}
+                                </select>
+			                </div>
+
+                            <div class="col-md-12 form-group">
+				                <strong>Nombre Problema</strong>
+                                <input type="text" id="txtNombreProblema" class="form-control" value="{$T.Dato.Problema}" />
+			                </div>                           	                    
+	                    </div>                   
+                    </div>
+                </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" id="btnEditarProblema">Editar</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+			</div>
+		</div>
+
+	</div>
+</textarea>

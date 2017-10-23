@@ -1,0 +1,77 @@
+﻿<textarea id="modalEditarSeguimientoReporteMantenimientoTmpl">
+	<div class="modal-dialog modal-lg" idReporte="{$T.Reporte.IdReporte}" >
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Editar seguimiento</h4>
+			</div>
+			<div class="modal-body">
+                <div class="container-fluid">
+					<div class="well bs-component">
+						<div class="row">
+							<div class="col-sm-6 quitaEspacio">                                
+                                <div class="row">
+                                    <label class="col-xs-5 control-label">Tipo problema</label>
+                                    <div class="col-xs-7 form-group">	
+                                        <select id="cmbTipoProblema" class="form-control input-sm">
+                                            <option value="0">-Seleccionar-</option>
+                                            {#foreach $T.Reporte.TipoProblemas as TipoProblema}                                                                           
+                                               <option {#if $T.Reporte.IdTipoProblema == $T.TipoProblema.Valor}selected="selected"{#/if} value="{$T.TipoProblema.Valor}">{$T.TipoProblema.Etiqueta}</option>                           
+                                            {#/for}
+                                        </select>
+                                    </div>
+                                </div>									
+
+							</div>
+							<div class="col-sm-6 quitaEspacio">
+								<div class="row">
+                                    <label class="col-xs-5 control-label">Problema</label>
+                                    <div class="col-xs-7 form-group">
+                                        <select id="cmbProblema" class="form-control input-sm">
+                                            <option value="0">-Seleccionar-</option>
+                                            {#foreach $T.Reporte.Problemas as Problema}                                                                           
+                                               <option {#if $T.Reporte.IdProblema == $T.Problema.Valor}selected="selected"{#/if} value="{$T.Problema.Valor}">{$T.Problema.Etiqueta}</option>                           
+                                            {#/for}
+                                        </select>
+                                    </div>
+                                </div>
+							</div>
+								
+							<div class="col-sm-6 quitaEspacio">
+                                <div class="row">
+                                    <label class="col-xs-5 control-label">Requiere proveedor</label>
+                                    <div class="col-xs-7 form-group">
+                                        <select id="cmbProveedor" class="form-control input-sm">
+                                            <option value="0">-Seleccionar-</option>
+                                            {#foreach $T.Reporte.Proveedores as Proveedor}                                                                           
+                                               <option {#if $T.Reporte.IdProveedor == $T.Proveedor.Valor}selected="selected"{#/if} value="{$T.Proveedor.Valor}">{$T.Proveedor.Etiqueta}</option>                           
+                                            {#/for}
+                                        </select>
+                                    </div>
+                                </div>							
+							</div>
+
+                            <div class="col-sm-6 quitaEspacio">
+                                <div class="row">
+                                    <label class="col-xs-5 control-label">Nombre proveedor</label>
+                                    <div class="col-xs-7 form-group">
+                                        <select id="cmbUsuarioProveedor" class="form-control input-sm">
+                                            <option value="0">-Seleccionar-</option>
+                                            {#foreach $T.Reporte.UsuarioProveedores as UsuarioProveedor}                                                                           
+                                               <option {#if $T.Reporte.IdUsuarioProveedor == $T.UsuarioProveedor.Valor}selected="selected"{#/if} value="{$T.UsuarioProveedor.Valor}">{$T.UsuarioProveedor.Etiqueta}</option>                           
+                                            {#/for}
+                                        </select>
+                                    </div>
+                                </div>							
+							</div>                                           								
+						</div>               
+                    </div>
+                </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" id="btnEditarSeguimiento">Editar</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+			</div>
+		</div>
+	</div>
+</textarea>
